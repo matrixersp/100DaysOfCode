@@ -27,8 +27,11 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('chat-messages', require('./components/ChatMessages.vue'));
-Vue.component('chat-form', require('./components/ChatForm.vue'));
+import ChatForm from './components/ChatForm.vue';
+import ChatMessages from './components/ChatMessages.vue';
+
+Vue.component('chat-messages', ChatMessages);
+Vue.component('chat-form', ChatForm);
 
 const app = new Vue({
     el: '#app',
@@ -38,6 +41,7 @@ const app = new Vue({
     },
 
     created() {
+        this.fetchMessages();
         Echo.private('chat')
             .listen('MessageSent', (e) => {
                 this.messages.push({
@@ -45,7 +49,6 @@ const app = new Vue({
                     user: e.user
                 });
             });
-        this.fetchMessages();
     },
 
     methods: {
@@ -56,6 +59,7 @@ const app = new Vue({
         },
 
         addMessage(message) {
+            console.log(message);
             this.messages.push(message);
 
             axios.post('/messages', message).then(response => {

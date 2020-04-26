@@ -1974,10 +1974,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["messages"]
 });
@@ -47224,23 +47220,15 @@ var render = function() {
     "ul",
     { staticClass: "chat" },
     _vm._l(_vm.messages, function(message) {
-      return _c("li", { staticClass: "left clearfix" }, [
+      return _c("li", { key: message.id, staticClass: "left clearfix" }, [
         _c("div", { staticClass: "chat-body clearfix" }, [
           _c("div", { staticClass: "header" }, [
             _c("strong", { staticClass: "primary-font" }, [
-              _vm._v(
-                "\n                    " +
-                  _vm._s(message.user.name) +
-                  "\n                "
-              )
+              _vm._v(_vm._s(message.user.name))
             ])
           ]),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                " + _vm._s(message.message) + "\n            "
-            )
-          ])
+          _c("p", [_vm._v(_vm._s(message.message))])
         ])
       ])
     }),
@@ -59462,9 +59450,13 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_ChatForm_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/ChatForm.vue */ "./resources/js/components/ChatForm.vue");
+/* harmony import */ var _components_ChatMessages_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/ChatMessages.vue */ "./resources/js/components/ChatMessages.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -59490,8 +59482,10 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('chat-messages', __webpack_require__(/*! ./components/ChatMessages.vue */ "./resources/js/components/ChatMessages.vue"));
-Vue.component('chat-form', __webpack_require__(/*! ./components/ChatForm.vue */ "./resources/js/components/ChatForm.vue"));
+
+
+Vue.component('chat-messages', _components_ChatMessages_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
+Vue.component('chat-form', _components_ChatForm_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var app = new Vue({
   el: '#app',
   data: {
@@ -59500,13 +59494,13 @@ var app = new Vue({
   created: function created() {
     var _this = this;
 
+    this.fetchMessages();
     Echo["private"]('chat').listen('MessageSent', function (e) {
       _this.messages.push({
         message: e.message.message,
         user: e.user
       });
     });
-    this.fetchMessages();
   },
   methods: {
     fetchMessages: function fetchMessages() {
@@ -59517,6 +59511,7 @@ var app = new Vue({
       });
     },
     addMessage: function addMessage(message) {
+      console.log(message);
       this.messages.push(message);
       axios.post('/messages', message).then(function (response) {
         console.log(response.data);
@@ -59571,7 +59566,8 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "d7de9138507411bf2e0b",
   cluster: "eu",
-  encrypted: true
+  encrypted: true,
+  enabledTransports: ['ws', 'wss']
 });
 
 /***/ }),
