@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #272727;
+  color: #e5e5e5;
+  font-family: 'Bubblegum Sans', Arial, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 820px;
+  text-align: center;
+  padding: 2em;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3em;
+  color: #b5b5b5;
+}
+
+hr {
+  margin-bottom: 2em;
+  border: 0;
+  height: .25em;
+  width: 8em;
+  text-align: center;
+  margin: 1em auto 2.5em;
+  background-color: #555;
+  border-radius: 2em;
+}
+
+table {
+  margin-top: 2em;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 3rem;
+  color: #e5e5e5;
+}
+
+td {
+  width: 1.75em;
+  height: 1.75em;
+  cursor: pointer; 
+  border: 3px solid #888;
+  background-color: #373737;
+}
+
+td:hover {
+  background-color: #575757;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #888;
+  padding: 1.5em 2.5em;
+  min-width: 6em;
+  font-size: 2.5rem;
+}
+
+.modal-body > h3{
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+.btn {
+  border: 1px solid #575757;
+  padding: .5em 1em;
+  background-color: #f5f5f5;
+  border-radius: .5em;
+  font-family: 'Bubblegum Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer; 
+  color: #373737;
+}
+
+.btn:hover {
+  background-color: #e5e5e5;
+}
+
+.btn + .btn {
+  margin-left: .8em;
+}
+
+.message {
+  margin-bottom: 1em;
+}

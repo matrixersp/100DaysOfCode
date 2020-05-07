@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+    <hr>
+
+    <table>
+      <tr>
+        <td data-idx="0" class="box"></td>
+        <td data-idx="1" class="box"></td>
+        <td data-idx="2" class="box"></td>
+      </tr>
+      <tr>
+        <td data-idx="3" class="box"></td>
+        <td data-idx="4" class="box"></td>
+        <td data-idx="5" class="box"></td>
+      </tr>
+      <tr>
+        <td data-idx="6" class="box"></td>
+        <td data-idx="7" class="box"></td>
+        <td data-idx="8" class="box"></td>
+      </tr>
+    </table>
+    <div id="player-symbol" class="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-body">
+        <h3>Play as</h3>
+        <button data-player-symbol="X" class="btn">X</button>
+        <button data-player-symbol="O" class="btn">O</button>
+      </div>
+    </div>
+    <div id="player-type" class="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-body">
+        <h3>Play against</h3>
+        <button data-player-type="Human" class="btn">Human</button>
+        <button data-player-type="CPU" class="btn">CPU</button>
+      </div>
+    </div>
+    <div id="alert" class="modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-body">
+        <p id="message" class="message"></p>
+        <button id="reset" class="btn">Play again?</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
