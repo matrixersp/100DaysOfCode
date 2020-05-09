@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle</title>
+  <style>
+    :root {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    *,
+    ::before,
+    ::after {
+      box-sizing: inherit;
+    }
+
+    .container {
+      display: flex;
+      min-height: 15em;
+      position: relative;
+    }
+
+    .switch {
+      margin: auto;
+      width: 9em;
+      height: 5em;
+      background-color: rgb(214, 214, 214);
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 3em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .switch::before {
+      content: " ";
+      background: #979797;
+      height: 3em;
+      width: 7em;
+      position: absolute;
+      top: 1em;
+      left: 1em;
+    }
+
+    input {
+      display: none;
+    }
+
+    .switch-left,
+    .switch-right {
+      width: 3em;
+      height: 3em;
+      position: absolute;
+      transition: .2s;
+    }
+
+    .switch-left {
+      transform: skewY(0);
+      top: 1em;
+      width: 3.5em;
+      left: 1em;
+      background-color: #40b8f0;
+    }
+
+    input[type="checkbox"]:checked + .switch-left {
+      top: 0.64em;
+      left: 1.5em;
+      width: 3em;
+      transform: skewY(14deg);
+    }
+
+    .switch-right {
+      top: 0.64em;
+      right: 1.5em;
+      transform: skewY(-14deg);
+      background-color: #c85656;
+    }
+
+    .switch-left::before,
+    .switch-right::before {
+      content: " ";
+      width: .5em;
+      height: 3em;
+      position: absolute;
+    }
+
+    .switch-left::before {
+      top: 0.43em;
+      left: -0.5em;
+      background-color:rgb(199, 199, 199);
+      transform: skewY(-60deg);
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .switch-left:before {
+      display: initial;
+    }
+
+    .switch-right::before {
+      top: 0.43em;
+      right: -0.5em;
+      background-color:rgb(199, 199, 199);
+      transform: skewY(60deg);
+    }
+
+    input[type="checkbox"]:checked + .switch-left + .switch-right::before {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .switch-left + .switch-right {
+      transform: skewY(0);
+      top: 1em;
+      width: 3.5em;
+      right: 1em;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <label class="switch">
+      <input type="checkbox" >
+      <span class="switch-left">On</span>
+      <span class="switch-right">Off</span>
+    </label>
+  </div>
+  
+</body>
+</html>

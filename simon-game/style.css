@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap&effect=emboss');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bubblegum Sans";
+}
+
+.container {
+  margin: 2em auto;
+  width: 360px;
+  height: 360px;
+  position: relative;
+}
+
+.circle {
+  border: 10px solid #3f3f3f;
+  border-radius: 100%;
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.circle h1 {
+  color: #373737;
+  font-size: 2.5rem;
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+.quarter {
+  width: 180px;
+  height: 180px;
+  position: absolute; 
+}
+
+.quarter--top-left {
+  top: 0;
+  left: 0;
+  border-left: 20px solid #3f3f3f;
+  border-right: 10px solid #3f3f3f;
+  border-top-left-radius: 100%;
+  background-color: rgb(255, 82, 82);
+}
+
+.quarter--top-right {
+  top: 0;
+  right: 0;
+  border-right: 20px solid #3f3f3f;
+  border-left: 10px solid #3f3f3f;
+  border-top-right-radius: 100%;
+  background-color: rgb(93, 219, 250);
+}
+
+.quarter--top-left,
+.quarter--top-right {
+  border-top: 20px solid #3f3f3f;
+  border-bottom: 10px solid #3f3f3f;
+}
+
+.quarter--bottom-right {
+  bottom: 0;
+  right: 0;
+  border-right: 20px solid #3f3f3f;
+  border-left: 10px solid #3f3f3f;
+  border-bottom-right-radius: 100%;
+  background-color: rgb(241, 109, 253);
+}
+
+.quarter--bottom-left {
+  bottom: 0;
+  left: 0;
+  border-left: 20px solid #3f3f3f;
+  border-right: 10px solid #3f3f3f;
+  border-bottom-left-radius: 100%;
+  background-color: rgb(0, 255, 170);
+}
+
+.quarter--bottom-right,
+.quarter--bottom-left {
+  border-bottom: 20px solid #3f3f3f;
+  border-top: 10px solid #3f3f3f;
+}
+
+.circle > .control {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.count > div {
+  width: 2em;
+  height: 1.5em;
+  background-color: #373737;
+  color: #e5e5e5;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.strict > span {
+  background-color: #444;
+  width: .4em;
+  height: .4em;
+  border-radius: 100%;
+  margin-bottom: .5em;
+}
+
+.count, .start, .strict {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.start > div, .strict > div{
+  background-color: #f00;
+  width: 1.2em;
+  height: 1.2em;
+  border: 3px solid #3f3f3f;
+  border-radius: 100%;
+  box-shadow: 0 .1em .2em #222;
+}
+
+.strict > div {
+  background-color: #ff2;
+}
+
+.start:active > div, .strict:active > div  {
+  box-shadow: none;
+}
+
+.circle  h3 {
+  margin: 0;
+  font-size: .5em;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
+  margin-top: .8em;
+}
+
+/* Switch */
+.mid {
+  display: flex;
+  position: relative;
+  margin: .5em;
+  font-family: Arial, sans-serif;
+}
+
+.switch {
+  margin: auto;
+  width: 2.5em;
+  height: 1.5em;
+  background-color: rgb(214, 214, 214);
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.switch::before {
+  content: " ";
+  background: #979797;
+  height: 1em;
+  width: 2em;
+  position: absolute;
+  top: .25em;
+  left: .25em;
+}
+
+input {
+  display: none;
+}
+
+.switch-left,
+.switch-right {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  transition: .2s;
+  user-select: none; 
+  line-height: 0.7;
+  transition: .3s;
+}
+
+.switch span {
+  display: inline-block;
+  font-size: 0.35em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.switch-left {
+  transform: skewY(0);
+  top: .25em;
+  left: 0.25em;
+  background-color: #c85656;
+  color: white;
+}
+
+.switch-right {
+  top: 0.10em;
+  right: .5em;
+  width: .75em;
+  transform: skewY(-22deg);
+  background-color: antiquewhite;
+  color: #444;
+}
+
+input[type="checkbox"]:checked + .switch-left {
+  top: 0.10em;
+  left: .5em;
+  width: .75em;
+  transform: skewY(22deg);
+  background-color: antiquewhite;
+  color: #444;
+}
+
+input[type="checkbox"]:checked + .switch-left + .switch-right {
+  transform: skewY(0);
+  top: 0.25em;
+  right: 0.25em;
+  width: 1em;
+  background-color: #42aaff;
+  color: white;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: " ";
+  width: .25em;
+  height: 1em;
+  position: absolute;
+}
+
+.switch-left::before {
+  top: 0.19em;
+  left: -0.25em;
+  background-color:rgb(199, 199, 199);
+  transform: skewY(-60deg);
+  display: none;
+}
+
+input[type="checkbox"]:checked + .switch-left:before {
+  display: initial;
+}
+
+
+
+.switch-right::before {
+  top: 0.19em;
+  right: -0.25em;
+  background-color:rgb(199, 199, 199);
+  transform: skewY(60deg);
+}
+
+input[type="checkbox"]:checked + .switch-left + .switch-right::before {
+  display: none;
+}
+
