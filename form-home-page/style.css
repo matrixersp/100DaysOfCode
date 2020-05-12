@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f3f1;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  min-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.header {
+  display: flex;
+  list-style: none;
+  padding: 1em 0;
+  font-weight: bold;
+}
+
+.header .title {
+  padding-left: 1.125em;
+}
+
+a {
+  color: #074992;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.number {
+  min-width: 3em;
+  text-align: center;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.replies, .views, .activity {
+  min-width: 4.5em;
+  text-align: center;
+}
+
+.avatars {
+  min-width: 11em;
+}
+
+img {
+  width: 1.75em;
+  border-radius: 100%;
+  border: 1px solid #e1e1e1;
+}
+
+.topic {
+  display: flex;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 3px 3px #d5d3d1;
+  border-radius: .5em;
+}
+
+.topic + .topic {
+  margin-top: .5em;
+}
+
+.topic li {
+  padding: 1em;
+}
+
+.topic li + li {
+  border-left: .125em solid #e1e1e1;
+}
