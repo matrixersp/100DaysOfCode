@@ -3,6 +3,7 @@
     <h1>Recipe Box</h1>
     <RecipesMenu v-bind:recipes="recipes" @recipeId="id = $event"/>
     <Recipe v-bind:recipe="getRecipe(id)" />
+    <RecipeModal modalTitle="Add a Recipe"/>
   </div>
 </template>
 
@@ -10,19 +11,21 @@
 import RecipesMenu from './components/RecipesMenu.vue'
 import Recipe from './components/Recipe.vue'
 import recipes from './components/recipes.js'
+import RecipeModal from './components/RecipeModal.vue'
 
 export default {
   name: 'App',
-  data:  function() {
+  data() {
     return {
       recipes,
       id: '',
-      recipe: '',
+      recipe: {},
     };
   },
   components: {
     RecipesMenu,
-    Recipe
+    Recipe,
+    RecipeModal
   },
   methods: {
     getRecipe(id) {
@@ -51,7 +54,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
 }

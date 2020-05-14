@@ -9,7 +9,6 @@ export default {
   props: ['recipes'],
   methods: {
     getId(id) {
-      console.log(id);
       this.$emit('recipeId', id);
     }
   }
