@@ -1,5 +1,5 @@
 <template>
-  <div class="recipe" v-if="recipe">
+  <div class="recipe" v-if="recipe.name">
 
     <h2 class="name">{{recipe.name}}</h2> 
     <div class="recipe-body">

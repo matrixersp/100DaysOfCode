@@ -5,15 +5,15 @@
     <form @submit.prevent="submitForm">
       <div class="input-group">
         <label for="name">Name:</label>
-        <input name="name" v-model="recipe.name" />
+        <input name="name" v-model="recipe.name" required/>
       </div>
       <div class="input-group">
         <label for="ingredients">Ingredients:</label>
-        <textarea name="ingredients" v-model="recipe.ingredients" cols="40" rows="8"></textarea>
+        <textarea name="ingredients" v-model="recipe.ingredients" cols="40" rows="8" required></textarea>
       </div>
       <div class="input-group">
         <label for="directions">Directions:</label>
-        <textarea name="directions" v-model="recipe.directions" cols="40" rows="8"></textarea>
+        <textarea name="directions" v-model="recipe.directions" cols="40" rows="8" required></textarea>
       </div>
       <button type="submit">Save</button>
     </form>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { EventBus } from '../main';
 import CloseIcon from 'vue-material-design-icons/Close.vue';
 
 export default {
@@ -33,16 +34,33 @@ export default {
   methods: {
     submitForm() {
       const regex = /\s*\\\s*/;
-      const ingredients = this.ingredients.split(regex);
-      const directions = this.directions.split(regex);
-      const recipes = JSON.parse(localStorage.getItem('recipes'));
-      const recipe = {id: recipes.length + 1, name: this.name, ingredients, directions};
-      recipes.push(recipe);
-      localStorage.setItem('recipes', JSON.stringify(recipes));
-      this.$emit('add-recipe', recipes);
+      const ingredients = this.recipe.ingredients.split(regex);
+      const directions = this.recipe.directions.split(regex);
+
+      if(this.modalTitle === 'Edit Recipe') this.editRecipe(ingredients, directions);
+      else if(this.modalTitle === 'Add a Recipe') this.addRecipe(ingredients, directions);
+
+      this.closeModal();
+    },
+    addRecipe(ingredients, directions) {
+      const recipe = {id: this.recipes.length + 1, name: this.recipe.name, ingredients, directions};
+      this.recipes.push(recipe);
+      localStorage.setItem('recipes', JSON.stringify(this.recipes));
+      EventBus.$emit('add-recipe', this.recipes);
+    },
+    editRecipe(ingredients, directions) {
+      const index = this.recipes.findIndex(recipe => recipe.id === this.recipe.id)
+      this.recipes[index].name = this.recipe.name;
+      this.recipes[index].ingredients = ingredients;
+      this.recipes[index].directions = directions;
+      console.log(this.recipes)
+      localStorage.setItem('recipes', JSON.stringify(this.recipes));
     },
     closeModal() {
-      this.modalTitle = '';
+      this.recipe.name = '';
+      this.recipe.ingredients = '';
+      this.recipe.directions = '';
+      EventBus.$emit('close-modal');
     }
   }
 }

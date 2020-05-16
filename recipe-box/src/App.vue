@@ -5,10 +5,10 @@
       <AddIcon class="icon icon-primary" @click="addRecipe"/>
     </div>
     <div class="content">
-      <RecipesMenu v-bind:recipes="recipes" v-model="recipes" @recipeId="id = $event" @delete-recipe="recipes = $event" @update-recipe="updateRecipe" />
-      <Recipe v-bind:recipe="getRecipe(id)" />
+      <RecipesMenu v-bind:recipes="recipes" v-model="recipes" />
+      <Recipe :recipe="recipe" />
     </div>
-    <RecipeModal :modalTitle="modalTitle" :recipe="recipe" @add-recipe="recipes = $event" />
+    <RecipeModal :modalTitle="modalTitle" :recipe="editedRecipe" :recipes="recipes" />
   </div>
 </template>
 
@@ -18,13 +18,15 @@ import Recipe from './components/Recipe.vue'
 import recipes from './components/recipes.js'
 import RecipeModal from './components/RecipeModal.vue'
 import AddIcon from 'vue-material-design-icons/Plus.vue';
+import { EventBus } from './main'
 
 export default {
   name: 'App',
   data() {
     return {
-      recipes: JSON.parse(localStorage.getItem('recipes')),
+      recipes,
       recipe: {},
+      editedRecipe: {},
       id: '',
       modalTitle: ''
     };
@@ -35,22 +37,37 @@ export default {
     RecipeModal,
     AddIcon
   },
-  beforeCreate() {
-    //localStorage.removeItem('recipes');
-    console.log(localStorage.getItem('recipes'));
-    if(!localStorage.getItem('recipes'))
-      localStorage.setItem('recipes', JSON.stringify(recipes));
+  created() {
+    // localStorage.removeItem('recipes');
+    if(localStorage.getItem('recipes')) {
+      this.recipes = JSON.parse(localStorage.getItem('recipes'));
+    }
+
+    EventBus.$on('select-recipe', (id) => {
+      this.recipe = this.recipes.find(recipe => recipe.id === id);
+    });
+
+    EventBus.$on('edit-recipe', (recipe) => {
+      this.editedRecipe.id = recipe.id;
+      this.editedRecipe.name = recipe.name;
+      this.editedRecipe.ingredients = recipe.ingredients.join(' \\ ');
+      this.editedRecipe.directions = recipe.directions.join(' \\ ');
+      this.modalTitle = 'Edit Recipe';
+    });
+
+    EventBus.$on('delete-recipe', (recipes) => {
+      this.recipes = recipes;
+    });
+
+    EventBus.$on('add-recipe', (recipes) => {
+      this.recipes = recipes;
+    });
+
+    EventBus.$on('close-modal', () => {
+      this.modalTitle = '';
+    })
   },
   methods: {
-    getRecipe(id) {
-      return this.recipes.find(recipe => recipe.id === id);
-    },
-    updateRecipe(id) {
-     this.recipe = this.recipes.find(recipe => recipe.id === id);
-     this.recipe.ingredients = this.recipe.ingredients.join(' \\ ');
-     this.recipe.directions = this.recipe.directions.join(' \\ ');
-     this.modalTitle = 'Edit Recipe';
-    },
     addRecipe() {
       this.modalTitle = 'Add a Recipe';
     }

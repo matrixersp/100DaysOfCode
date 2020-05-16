@@ -1,10 +1,11 @@
 <template>
   <ul class="menu">
-    <li v-for="recipe in recipes" :key="recipe.id"><a href="#artichoke-pasta" @click="getId(recipe.id)">{{recipe.name}}</a><DeleteIcon class="icon icon-danger" @click="deleteRecipe(recipe.id)"/><EditIcon class="icon" @click="editRecipe(recipe.id)"/></li>
+    <li v-for="recipe in recipes" :key="recipe.id"><a  href="#artichoke-pasta" @click="getId(recipe.id)">{{recipe.name}}</a><DeleteIcon class="icon icon-danger" @click="deleteRecipe(recipe.id)"/><EditIcon class="icon" @click="editRecipe(recipe.id)"/></li>
   </ul>
 </template>
 
 <script>
+import { EventBus } from '../main';
 import EditIcon from 'vue-material-design-icons/Pencil.vue';
 import DeleteIcon from 'vue-material-design-icons/Delete.vue';
 export default {
@@ -15,16 +16,16 @@ export default {
   },
   methods: {
     getId(id) {
-      this.$emit('recipeId', id);
+      EventBus.$emit('select-recipe', id);
     },
     editRecipe(id) {
-      this.$emit('update-recipe', id);
+      const recipe = this.recipes.find(recipe => recipe.id === id);
+      EventBus.$emit('edit-recipe', recipe);
     },
     deleteRecipe(id) {
-      console.log(id);
       const newRecipes = this.recipes.filter(recipe => recipe.id !== id);
-      localStorage.setItem('recipes', newRecipes);
-      this.$emit('delete-recipe', newRecipes);
+      localStorage.setItem('recipes', JSON.stringify(newRecipes));
+      EventBus.$emit('delete-recipe', newRecipes);
     }
   }
 }
