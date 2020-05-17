@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: #4e4f60;
+  background-color: #fafafa;
+}
+
+.container {
+  margin: 6em 1em;
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto 5em;
+  max-width: 45em;
+}
+
+@media (min-width: 77.5em) {
+  .header {
+    margin-bottom: 3em;
+  }
+}
+
+h1 {
+  font-weight: 200;
+  line-height: 1.5;
+  color: #8f8e92;
+}
+
+h1 > strong {
+  display: block;
+  font-weight: 600;
+  color: #5e5f70;
+}
+
+.header > p {
+  font-size: 1.3rem;
+  color: #a7a7a9;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 77.5em) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.card {
+  border-top: .25em solid;
+  border-radius: .3em;
+  margin: 1em;
+  box-shadow: 0 0.5em 1em #d0d7e0;
+  padding: 2em;
+  width: 21.25em;
+}
+
+.card > h2 {
+  margin-top: 0;
+  color: #515055;
+}
+
+.card > p {
+  color: #a2a2a4;
+}
+
+.card > img {
+  float: right;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 77.5em) {
+  .card > img {
+    margin-top: 2em;
+  }
+}
+
+.card::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.card--green {
+  border-color: #4acecf;
+}
+
+.card--red {
+  border-color: #d5595c;
+}
+
+.card--orange {
+  border-color: #f3ae58;
+}
+
+.card--blue {
+  border-color:#599ce8;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
