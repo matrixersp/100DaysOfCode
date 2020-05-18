@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.rectangle {
+  position: absolute; 
+  background-color: hsl(207, 33%, 95%);
+  width: 50vw;
+  height: 62vh;
+  border-bottom-left-radius: 3em;
+  right: 0px;
+  z-index: -10;
+}
+
+header {
+  display: flex;
+  font-family: "Barlow Condensed";
+  align-items: center;
+  margin: 50px 32px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  display: none;
+}
+
+nav.is-open .nav-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  top: 20%;
+  left: 1em;
+  right: 1em;
+  padding: 1em;
+  border-radius: .125em;
+  z-index: 10;
+  box-shadow: 0 .25em .5em #616161;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: hsl(230, 29%, 20%);
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+@media (min-width: 630px) {
+  .menu-toggle {
+    display: none;
+  }
+
+
+  nav {
+    display: initial;
+  }
+}
+
+.menu-toggle > span {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Hero Styles */
+.hero {
+  display: flex;
+  font-family: "Barlow Condensed";
+  flex-direction: column-reverse;
+  margin-top: 60px;
+}
+
+@media (min-width: 630px) {
+  .hero {
+    margin: 100px 60px 0;
+    flex-direction: row;
+  }
+}
+
+.hero__content {
+  margin: 80px 32px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(230, 29%, 20%);
+  font-size: 44px;
+}
+
+.hero__content:first-child {
+  text-transform: uppercase;
+}
+
+.badge {
+  background-color: hsl(230, 29%, 20%);
+  color: white;
+  border-radius: 2em;
+  font-weight: 700;
+  padding: .2em .6em .3em;
+  margin-right: .7em;
+  text-transform: uppercase;
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cta-wrapper p {
+  text-transform: uppercase;
+}
+
+.btn-cta {
+  font-family: "Barlow Condensed";
+  background-color: hsl(0, 100%, 68%);
+  color: white;
+  font-weight: 700;
+  padding:  .75em 1.75em .7em;
+  text-decoration: none;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  margin-right: 1em;
+}
+
+.hero > .illustration {
+  position: relative;
+  width: 150%;
+}
+
+@media (min-width: 630px) {
+  .hero > .illustration {
+    position: relative;
+    margin-right: -800px;
+    width: 90%;
+  }
+}
