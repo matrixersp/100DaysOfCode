@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Social Media Dashboard with Theme Switcher</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="rectangle"></div>
+    <header>
+      <div class="title">
+        <h1>Social Media Dashboard</h1>
+        <div class="total-followers-count">Total Followers: 23,004</div>
+      </div>
+      <div class="dark-mode">
+        <span>Dark Mode</span>
+        <input class="checkbox" type="checkbox" id="switch">
+        <label id="data-theme" class="toggle" for="switch"></label>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+
+        <div class="card card--lg card--facebook">
+          <div class="user">
+            <img src="./images/icon-facebook.svg" alt="Facebook icon">
+            <span class="user__name">@nathanf</span>
+          </div>
+          <div class="followers">
+            <div class="followers__count">
+              1987
+            </div>
+            <span>
+              F o l l o w e r s
+            </span>
+          </div>
+          <span class="ratio ratio--up">12 Today</span>
+        </div>
+
+        <div class="card card--lg card--twitter">
+          <div class="user">
+            <img src="./images/icon-twitter.svg" alt="Twitter icon">
+            <span class="user__name">@nathanf</span>
+          </div>
+          <div class="followers">
+            <div class="followers__count">
+              1044
+            </div>
+            <span>
+              F o l l o w e r s
+            </span>
+          </div>
+          <span class="ratio ratio--up">99 Today</span>
+        </div>
+
+        <div class="card card--lg card--instagram">
+          <div class="user">
+            <img src="./images/icon-instagram.svg" alt="Instagram icon">
+            <span class="user__name">@realnathanf</span>
+          </div>
+          <div class="followers">
+            <div class="followers__count">
+              11k
+            </div>
+            <span>
+              F o l l o w e r s
+            </span>
+          </div>
+          <span class="ratio ratio--up">1099 Today</span>
+        </div>
+
+        <div class="card card--lg card--youtube">
+          <div class="user">
+            <img src="./images/icon-youtube.svg" alt="Youtube icon">
+            <span class="user__name">Nathan F.</span>
+          </div>
+          <div class="followers">
+            <div class="followers__count">
+              8239
+            </div>
+            <span>
+              S u b s c r i b e r s
+            </span>
+          </div>
+          <span class="ratio ratio--down">144 Today</span>
+        </div>
+      </div>
+
+      <div class="today-overview">
+        <h2>Overview - Today</h2>
+
+        <div class="container">
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Page Views</div>
+              <img src="./images/icon-facebook.svg" alt="Facebook icon">
+            </div>
+            <div class="stats">
+              <div class="count">87</div>
+              <div class="ratio ratio--up">3%</div>
+            </div>
+          </div>
+
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Likes</div>
+              <img src="./images/icon-facebook.svg" alt="Facebook icon">
+            </div>
+            <div class="stats">
+              <div class="count">52</div>
+              <div class="ratio ratio--down">2%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Likes</div>
+              <img src="./images/icon-instagram.svg" alt="Instagram icon">
+            </div>
+            <div class="stats">
+              <div class="count">5462</div>
+              <div class="ratio ratio--up">2257%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Profile Views</div>
+              <img src="./images/icon-instagram.svg" alt="Instagram icon">
+            </div>
+            <div class="stats">
+              <div class="count">52k</div>
+              <div class="ratio ratio--up">1375%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Retweets</div>
+              <img src="./images/icon-twitter.svg" alt="Twitter icon">
+            </div>
+            <div class="stats">
+              <div class="count">117</div>
+              <div class="ratio ratio--up">303%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Likes</div>
+              <img src="./images/icon-twitter.svg" alt="Twitter icon">
+            </div>
+            <div class="stats">
+              <div class="count">507</div>
+              <div class="ratio ratio--up">553%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Likes</div>
+              <img src="./images/icon-youtube.svg" alt="Youtube icon">
+            </div>
+            <div class="stats">
+              <div class="count">107</div>
+              <div class="ratio ratio--down">19%</div>
+            </div>
+          </div>
+
+          <div class="card card--sm">
+            <div class="overview">
+              <div>Total Views</div>
+              <img src="./images/icon-youtube.svg" alt="Youtube icon">
+            </div>
+            <div class="stats">
+              <div class="count">1407</div>
+              <div class="ratio ratio--down">12%</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/matrixersp" target="_blank">Mohammed Boudad</a>.
+  </div>
+</body>
+
+</html>
