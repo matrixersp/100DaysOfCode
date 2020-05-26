@@ -26,261 +26,276 @@
 
 <body>
 
-  <img class="bg-header" src="./images/bg-header-mobile.svg"
-    srcset="./images/bg-header-mobile.svg 375w,
-            ./images/bg-header-desktop.svg 1366w">
+  <div class="bg-header"></div>
 
   <div class="container">
+    <div id="filters-wrapper" class="filters-wrapper is-visible"></div>
 
-    <div class="job">
-      <img class="logo" src="./images/photosnap.svg" alt="Photosnap">
-      <div>
-        <div class="job__badges">
-          <div>Photosnap</div>
-          <div class="badge badge--new">New!</div>
-          <div class="badge badge--featured">Featured</div>
+    <div id="jobs-wrapper" class="jobs-wrapper">
+
+      <div class="job job--featured">
+        <img class="logo" src="./images/photosnap.svg" alt="Photosnap">
+        <div>
+          <div class="job__badges">
+            <div>Photosnap</div>
+            <div class="badge badge--new">New!</div>
+            <div class="badge badge--featured">Featured</div>
+          </div>
+          <a class="job__title" href="#">Senior Frontend Developer</a>
+          <div class="job__captions">
+            <div class="caption">1d ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Part Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Remote</div>
+          </div>
         </div>
-        <div class="job__title">Senior Frontend Developer</div>
-        <div class="job__captions">
-          <div class="caption">1d ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Part Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Remote</div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Senior</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
         </div>
       </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Senior</span>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-      </div>
-    </div>
 
 
-    <div class="job">
-      <img class="logo" src="./images/manage.svg" alt="Manage">
-      <div>
-        <div class="job__badges">
-          <div>Manage</div>
-          <div class="badge badge--new">New!</div>
-          <div class="badge badge--featured">Featured</div>
+      <div class="job job--featured">
+        <img class="logo" src="./images/manage.svg" alt="Manage">
+        <div>
+          <div class="job__badges">
+            <div>Manage</div>
+            <div class="badge badge--new">New!</div>
+            <div class="badge badge--featured">Featured</div>
+          </div>
+          <a class="job__title" href="#">Fullstack Developer</a>
+          <div class="job__captions">
+            <div class="caption">1d ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Part Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Remote</div>
+          </div>
         </div>
-        <div class="job__title">Fullstack Developer</div>
-        <div class="job__captions">
-          <div class="caption">1d ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Part Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Remote</div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Fullstack</span>
+          <span class="tag level">Midweight</span>
+          <span class="tag">Python</span>
+          <span class="tag">React</span>
         </div>
       </div>
-      <div class="job__tags">
-        <span class="tag role">Fullstack</span>
-        <span class="tag level">Midweight</span>
-        <span class="tag">Python</span>
-        <span class="tag">React</span>
+
+      <div class="job">
+        <img class="logo" src="./images/account.svg" alt="Account">
+        <div>
+          <div class="job__badges">
+            <div>Account</div>
+            <div class="badge badge--new">New!</div>
+          </div>
+          <a class="job__title" href="#">Junior Frontend Developer</a>
+          <div class="job__captions">
+            <div class="caption">2d ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Part Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">USA only</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Sass</span>
+        </div>
       </div>
+
+      <div class="job">
+        <img class="logo" src="./images/myhome.svg" alt="MyHome">
+        <div>
+          <div class="job__badges">
+            <div>MyHome</div>
+          </div>
+          <a class="job__title" href="#">Junior Frontend Developer</a>
+          <div class="job__captions">
+            <div class="caption">5d ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Contract</div>
+            <div class="caption dot">.</div>
+            <div class="caption">USA only</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/loop-studios.svg" alt="Loop Studios">
+        <div>
+          <div class="job__badges">
+            <div>Loop Studios</div>
+          </div>
+          <a class="job__title" href="#">Software Engineer</a>
+          <div class="job__captions">
+            <div class="caption">1w ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Full Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Worldwide</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Fullstack</span>
+          <span class="tag level">Midweight</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Ruby</span>
+          <span class="tag">Sass</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/faceit.svg" alt="FaceIt">
+        <div>
+          <div class="job__badges">
+            <div>FaceIt</div>
+          </div>
+          <a class="job__title" href="#">Junior Backend Developer</a>
+          <div class="job__captions">
+            <div class="caption">2w ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Full Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">UK only</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Backend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">Ruby</span>
+          <span class="tag">RoR</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/shortly.svg" alt="Shortly">
+        <div>
+          <div class="job__badges">
+            <div>Shortly</div>
+          </div>
+          <a class="job__title" href="#">Junior Developer</a>
+          <div class="job__captions">
+            <div class="caption">2w ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Full Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Worldwide</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Sass</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/insure.svg" alt="Insure">
+        <div>
+          <div class="job__badges">
+            <div>Insure</div>
+          </div>
+          <a class="job__title" href="#">Junior Frontend Developer</a>
+          <div class="job__captions">
+            <div class="caption">2w ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Full Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">USA only</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Vue</span>
+          <span class="tag">Sass</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/eyecam-co.svg" alt="Eyecam Co.">
+        <div>
+          <div class="job__badges">
+            <div>Eyecam Co.</div>
+          </div>
+          <a class="job__title" href="#">Full Stack Engineer</a>
+          <div class="job__captions">
+            <div class="caption">3w ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Full Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Worldwide</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Fullstack</span>
+          <span class="tag level">Midweight</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <img class="logo" src="./images/the-air-filter-company.svg" alt="The Air Filter Company">
+        <div>
+          <div class="job__badges">
+            <div>The Air Filter Company</div>
+          </div>
+          <a class="job__title" href="#">Front-end Dev</a>
+          <div class="job__captions">
+            <div class="caption">1mo ago</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Part Time</div>
+            <div class="caption dot">.</div>
+            <div class="caption">Worldwide</div>
+          </div>
+        </div>
+        <hr class="line hide" />
+        <div class="job__tags">
+          <span class="tag role">Frontend</span>
+          <span class="tag level">Junior</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Sass</span>
+        </div>
+      </div>
+
     </div>
 
-    <div class="job">
-      <img class="logo" src="./images/account.svg" alt="Account">
-      <div>
-        <div class="job__badges">
-          <div>Account</div>
-          <div class="badge badge--new">New!</div>
-        </div>
-        <div class="job__title">Junior Frontend Developer</div>
-        <div class="job__captions">
-          <div class="caption">2d ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Part Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">USA only</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">React</span>
-        <span class="tag">Sass</span>
-      </div>
-    </div>
-  
-    <div class="job">
-      <img class="logo" src="./images/myhome.svg" alt="MyHome">
-      <div>
-        <div class="job__badges">
-          <div>MyHome</div>
-        </div>
-        <div class="job__title">Junior Frontend Developer</div>
-        <div class="job__captions">
-          <div class="caption">5d ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Contract</div>
-          <div class="caption dot">.</div>
-          <div class="caption">USA only</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-      </div>
-    </div>
-  
-    <div class="job">
-      <img class="logo" src="./images/loop-studios.svg" alt="Loop Studios">
-      <div>
-        <div class="job__badges">
-          <div>Loop Studios</div>
-        </div>
-        <div class="job__title">Software Engineer</div>
-        <div class="job__captions">
-          <div class="caption">1w ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Full Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Worldwide</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Fullstack</span>
-        <span class="tag level">Midweight</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Ruby</span>
-        <span class="tag">Sass</span>
-      </div>
-    </div>
-  
-    <div class="job">
-      <img class="logo" src="./images/faceit.svg" alt="FaceIt">
-      <div>
-        <div class="job__badges">
-          <div>FaceIt</div>
-        </div>
-        <div class="job__title">Junior Backend Developer</div>
-        <div class="job__captions">
-          <div class="caption">2w ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Full Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">UK only</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Backend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">Ruby</span>
-        <span class="tag">RoR</span>
-      </div>
-    </div>
-
-    <div class="job">
-      <img class="logo" src="./images/shortly.svg" alt="Shortly">
-      <div>
-        <div class="job__badges">
-          <div>Shortly</div>
-        </div>
-        <div class="job__title">Junior Developer</div>
-        <div class="job__captions">
-          <div class="caption">2w ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Full Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Worldwide</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">HTML</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Sass</span>
-      </div>
-    </div>
-  
-    <div class="job">
-      <img class="logo" src="./images/insure.svg" alt="Insure">
-      <div>
-        <div class="job__badges">
-          <div>Insure</div>
-        </div>
-        <div class="job__title">Junior Frontend Developer</div>
-        <div class="job__captions">
-          <div class="caption">2w ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Full Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">USA only</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Vue</span>
-        <span class="tag">Sass</span>
-      </div>
-    </div>
-
-    <div class="job">
-      <img class="logo" src="./images/eyecam-co.svg" alt="Eyecam Co.">
-      <div>
-        <div class="job__badges">
-          <div>Eyecam Co.</div>
-        </div>
-        <div class="job__title">Full Stack Engineer</div>
-        <div class="job__captions">
-          <div class="caption">3w ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Full Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Worldwide</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Fullstack</span>
-        <span class="tag level">Midweight</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Python</span>
-        <span class="tag">Django</span>
-      </div>
-    </div>
-    
-    <div class="job">
-      <img class="logo" src="./images/the-air-filter-company.svg" alt="The Air Filter Company">
-      <div>
-        <div class="job__badges">
-          <div>The Air Filter Company</div>
-        </div>
-        <div class="job__title">Front-end Dev</div>
-        <div class="job__captions">
-          <div class="caption">1mo ago</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Part Time</div>
-          <div class="caption dot">.</div>
-          <div class="caption">Worldwide</div>
-        </div>
-      </div>
-      <div class="job__tags">
-        <span class="tag role">Frontend</span>
-        <span class="tag level">Junior</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">React</span>
-        <span class="tag">Sass</span>
-      </div>
-    </div>
-  
   </div>
 
-  <div class="attribution">
+  <p class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/matrixersp" target="_blank">Mohammed Boudad</a>.
-  </div>
+  </p>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
