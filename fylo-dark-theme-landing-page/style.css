@@ -165,6 +165,14 @@ main {
 @media (max-width: 58.625em) {
   .stay-productive .stay-productive__content {
     flex-direction: column;
+    padding: 0 2em;
+  }
+  .stay-productive .stay-productive__content .illustration,
+.stay-productive .stay-productive__content div {
+    width: 100%;
+  }
+  .stay-productive .stay-productive__content .illustration {
+    margin: 0 0 2em;
   }
 }
 .testimonials {
@@ -211,6 +219,9 @@ main {
 }
 
 .get-started {
+  padding: 0em 1em;
+}
+.get-started .get-started__content {
   background-color: #1c2431;
   max-width: 44em;
   box-shadow: 0 0.25em 1em #000;
@@ -220,8 +231,6 @@ main {
   margin-top: 5em;
   margin-bottom: -6em;
   position: relative;
-}
-.get-started .get-started__content {
   text-align: center;
 }
 .get-started .get-started__content h2 {
