@@ -45,6 +45,14 @@ header .nav li + li {
   margin-left: 1em;
 }
 
+@media (max-width: 58.625em) {
+  header .brand {
+    width: 7em;
+  }
+  header .brand img {
+    width: 100%;
+  }
+}
 main {
   background-color: #181f2a;
 }
@@ -70,6 +78,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 0 1em;
 }
 .hero .hero__content {
   margin: 0 auto;
@@ -153,6 +162,11 @@ main {
   height: 1em;
 }
 
+@media (max-width: 58.625em) {
+  .stay-productive .stay-productive__content {
+    flex-direction: column;
+  }
+}
 .testimonials {
   margin: 0 auto 6em;
   max-width: 80em;
