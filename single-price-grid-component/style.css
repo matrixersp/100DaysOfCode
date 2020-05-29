@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* General styles */
+:root {
+  box-sizing: border-box;
+
+  /* Primary */
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(179, 62%, 46%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  /* Neutral */
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --light-grayish-blue: hsl(218, 22%, 77%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--light-gray);
+  display: flex;
+  height: 100vh;
+  padding: 1.5em;
+}
+
+.container {
+  margin: auto;
+  width: 40em;
+}
+
+.outer-wrapper {
+  box-shadow: 0 1em 2em var(--light-grayish-blue);
+  border-radius: 0.5em;
+}
+
+section {
+  padding: 2.5em;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+p + p {
+  margin-top: .375em;
+}
+
+/* join-community styles */
+.join-community {
+  background-color: white;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.join-community h1 {
+  color: var(--cyan);
+  margin-bottom: .875em;
+}
+
+.join-community h3 {
+  color: var(--bright-yellow);
+  margin-bottom: .675em;
+}
+
+.join-community p {
+  color: var(--grayish-blue);
+}
+
+.wrapper {
+  display: flex;
+}
+
+/* subscription styles */
+.subscription {
+  background-color: var(--cyan);
+  color: var(--light-gray);
+  flex-basis: 50%;
+  border-bottom-left-radius: 0.5em;
+}
+
+.subscription p {
+  display: flex;
+  align-items: center;
+}
+
+.subscription p:first-of-type {
+  color: #eee; 
+  font-size: .875em;
+}
+
+.subscription p span {
+  font-size: 2em;
+  font-weight: 700;
+  margin-right: .25em;
+}
+
+.subscription button {
+  background-color: var(--bright-yellow);
+  border: none;
+  color: white;
+  border-radius: .5em;
+  padding: 1.25em 2em 1.125em;
+  width: 100%;
+  font-weight: 700;
+  margin: 2em auto 0;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
+  cursor: pointer; 
+}
+
+.subscription button:hover {
+  opacity: 0.9;
+}
+
+/* why-us styles */
+.why-us {
+  flex-basis: 50%;
+  background-color: var(--light-cyan);
+  color: var(--light-gray);
+  border-bottom-right-radius: 0.5em;
+}
+
+.why-us ul {
+  list-style: none;
+}
+
+.why-us li + li {
+  margin-top: .25em;
+  font-size: 0.875rem;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+@media (max-width: 33em) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .subscription {
+    border-radius: 0;
+  }
+
+  .why-us {
+    border-bottom-left-radius: 0.5em;
+  }
+}
