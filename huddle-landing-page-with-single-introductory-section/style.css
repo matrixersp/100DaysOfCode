@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@400;700&display=swap");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before ::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #674baf;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 2.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 100%;
+}
+
+header .brand {
+  width: 12em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.hero {
+  margin-top: 3.875em;
+  margin-bottom: 1em;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__content img, .hero__content div {
+  height: 100%;
+}
+
+.hero__content img {
+  width: 55%;
+  align-self: center;
+}
+
+.hero__content div {
+  width: 40%;
+}
+
+.hero__content h1 {
+  font-size: 2.25em;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero__content p {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+.hero__content .btn {
+  text-decoration: none;
+  color: #674baf;
+  background: white;
+  border-radius: 10em;
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.4);
+  padding: 0.75em 3.675em 0.75em;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.social__links {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  float: right;
+}
+
+.social__links li + li {
+  margin-left: 1em;
+}
+
+.social__links a {
+  display: inline-block;
+  text-align: center;
+  padding: 0.125em;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  color: white;
+}
+
+.social__links i {
+  vertical-align: middle;
+}
+
+@media (max-width: 59em) {
+  body {
+    padding: 2.5em;
+    background-image: url(./images/bg-mobile.svg);
+    background-size: 100%;
+  }
+
+  .hero__content {
+    flex-direction: column;
+  }
+
+  .hero__content img, .hero__content div {
+    width: 100%;
+  }
+
+  .social {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 35em) {
+  body {
+    padding: 1.375em;
+  }
+
+  header .brand {
+    width: 8em;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .hero {
+    margin-top: 2.75em;
+  }
+
+  .hero__content h1 {
+    font-size: 1.375em;
+  }
+
+  .social {
+    display: inline-block;
+  }
+}
+footer {
+  margin-top: 4em;
+}
+
+/*# sourceMappingURL=style.css.map */
