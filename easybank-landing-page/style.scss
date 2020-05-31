@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+$font-stack: "Public Sans", Arial, sans-serif;
+
+// Primary
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+// Neutral
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-stack;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  padding: 0 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin: auto;
+}
+
+.links {
+  padding-right: 0;
+  list-style: none;
+  display: flex;
+
+  li + li {
+    margin-left: 1em;
+  }
+
+  a {
+    color: $grayish-blue;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: $white;
+  outline: none;
+}
+
+.cta--btn {
+  padding: 0.75em 2em 0.875em;
+  background: linear-gradient(to right, $lime-green, $bright-cyan);
+  border: none;
+  border-radius: 10em;
+}
+
+// Hero section
+.hero {
+  display: flex;
+}

@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Public Sans", Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin: auto;
+}
+
+.links {
+  padding-right: 0;
+  list-style: none;
+  display: flex;
+}
+.links li + li {
+  margin-left: 1em;
+}
+.links a {
+  color: #9698a6;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  outline: none;
+}
+
+.cta--btn {
+  padding: 0.75em 2em 0.875em;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  border: none;
+  border-radius: 10em;
+}
+
+.hero {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
