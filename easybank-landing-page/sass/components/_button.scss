@@ -1,0 +1,12 @@
+.btn {
+  display: inline-block;
+  color: $white;
+  outline: none;
+}
+
+.cta--btn {
+  padding: 0.75em 2em 0.875em;
+  background: linear-gradient(to right, $lime-green, $bright-cyan);
+  border: none;
+  border-radius: 10em;
+}

@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin: auto;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}

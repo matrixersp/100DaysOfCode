@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  padding: 0 2em;
+}
+
+.primary-nav {
+  li + li {
+    margin-left: 1em;
+  }
+
+  a {
+    color: $grayish-blue;
+  }
+}

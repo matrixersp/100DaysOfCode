@@ -22,7 +22,7 @@
     }
   </style>
   <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" type="text/css">
+  <link rel="stylesheet" href="./sass/main.css" type="text/css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
   <header>
     <a class="brand" href="#"><img src="./images/logo.svg" alt="Logo"></a>
     <nav>
-      <ul class="links">
+      <ul class="primary-nav">
         <li><a href="/home">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact</a></li>
@@ -57,7 +57,7 @@
 
     <section class="services">
       <div class="services__content">
-        <div class="description">
+        <div class="section-intro">
           <h2>Why choose Easybank?</h2>
           <p>We leverage Open Banking to turn your bank account into your financial hub.<br />Control your finances like
             never before.</p>
@@ -92,7 +92,7 @@
     </section>
     <section class="articles">
       <div class="articles__content">
-        <div class="description">
+        <div class="section-intro">
           <h2>Latest Articles</h2>
         </div>
         <div class="cards-wrapper">
@@ -130,9 +130,9 @@
     </section>
   </main>
   <footer>
-    <div class="left-side">
+    <div class="column column-first">
       <a class="brand" href="#"><img src="./images/logo-white.svg" alt="Logo"></a>
-      <ul class="social">
+      <ul class="social-links">
         <li><a href="https://twitter.com/matrixersp"><i class="fab fa-twitter"></i></a></li>
         <li><a href="#"><i class="fab fa-youtube"></i></a></li>
         <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
@@ -141,18 +141,18 @@
       </ul>
     </div>
 
-    <ul class="links">
+    <ul class="sub-links column">
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#">Blog</a></li>
     </ul>
-    <ul class="links">
+    <ul class="sub-links column">
       <li><a href="#">Careers</a></li>
       <li><a href="#">Support</a></li>
       <li><a href="#">Privacy Policy</a></li>
     </ul>
 
-    <div class="right-side">
+    <div class="column column-last">
       <a class="btn cta--btn" href="#">Request Invite</a>
       <span>© Easybank. All Rights Reserved</span>
     </div>

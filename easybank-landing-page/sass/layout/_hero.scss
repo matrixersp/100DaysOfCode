@@ -1,0 +1,77 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__bg {
+  background-image: url(./images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+  max-width: 53%;
+  position: relative;
+  top: -16em;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.hero__bg img {
+  margin-top: 10em;
+}
+
+.hero__content {
+  margin: 9em 3.5em 0 10%;
+  width: 47%;
+}
+
+.hero__content h1 {
+  color: $dark-blue;
+  font-size: 2.75em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+
+.hero__content p {
+  color: $grayish-blue;
+  margin-bottom: 2.5em;
+}
+
+.services {
+  background-color: $light-grayish-blue;
+  margin-top: -23em;
+  padding: 3em 10%;
+  margin-left: -0.75em;
+  z-index: -30;
+  position: relative;
+}
+
+.section-intro {
+  margin-bottom: 2em;
+  margin-left: 0.75em;
+}
+
+.section-intro h2 {
+  color: $dark-blue;
+}
+
+.section-intro p {
+  color: $grayish-blue;
+}
+
+.section-intro h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.media-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articles {
+  padding: 3em 10%;
+  margin-left: -0.75em;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
