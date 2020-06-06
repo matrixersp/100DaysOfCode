@@ -3,17 +3,18 @@ html {
 }
 
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: inherit;
+}
+
+section {
+  display: flex;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
-}
-
-nav {
-  margin: auto;
 }
 
 ul {

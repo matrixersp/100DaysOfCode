@@ -1,25 +1,58 @@
 .hero {
   display: flex;
-  justify-content: space-between;
-}
-
-.hero__bg {
-  background-image: url(./images/bg-intro-desktop.svg);
-  background-repeat: no-repeat;
-  max-width: 53%;
-  position: relative;
-  top: -16em;
-  z-index: -10;
   overflow: hidden;
-}
+  background-image: url(../../images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 40vw;
+  background-position-y: -16.25em;
+  margin-bottom: -10em;
 
-.hero__bg img {
-  margin-top: 10em;
+  @include tablet {
+    background-position-x: 0vw;
+    background-position-y: -18em;
+    margin-bottom: 0;
+  }
 }
 
 .hero__content {
-  margin: 9em 3.5em 0 10%;
-  width: 47%;
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.hero__content__body {
+  margin-top: 6em;
+  width: 40%;
+  margin-bottom: 20em;
+
+  @include tablet {
+    margin-bottom: 5em;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  margin-top: -8em;
+  width: 55%;
+
+  @include tablet {
+    order: -1;
+    width: 100%;
+  }
+}
+
+.img-wrapper img {
+  width: 100%;
+  margin-left: 8em;
+
+  @include tablet {
+    margin-left: 0;
+  }
 }
 
 .hero__content h1 {
@@ -36,11 +69,8 @@
 
 .services {
   background-color: $light-grayish-blue;
-  margin-top: -23em;
   padding: 3em 10%;
   margin-left: -0.75em;
-  z-index: -30;
-  position: relative;
 }
 
 .section-intro {

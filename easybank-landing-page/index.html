@@ -27,39 +27,51 @@
 
 <body>
 
-  <header>
-    <a class="brand" href="#"><img src="./images/logo.svg" alt="Logo"></a>
-    <nav>
-      <ul class="primary-nav">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/careers">Careers</a></li>
-      </ul>
-    </nav>
-    <a class="btn cta--btn" href="#">Request Invite</a>
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <a class="brand" href="#"><img src="./images/logo.svg" alt="Logo"></a>
+
+        <button id="menu-toggle" class="menu-toggle">
+          <img src="./images/icon-hamburger.svg" alt="Menu icon">
+        </button>
+        <nav id="nav">
+          <ul class="primary-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/careers">Careers</a></li>
+          </ul>
+        </nav>
+        <a id="request-btn" class="btn cta--btn" href="#">Request Invite</a>
+
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero__content">
-        <h1>Next generation digital banking</h1>
-        <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving,
-          budgeting,
-          investing, and much more.</p>
-        <a class="btn cta--btn" href="#">Request Invite</a>
-      </div>
-      <div class="hero__bg">
-        <img src="./images/image-mockups.png" alt="Mockeups">
+      <div class="hero__content container">
+        <div class="hero__content__body">
+          <h1>Next generation digital banking</h1>
+          <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving,
+            budgeting,
+            investing, and much more.</p>
+          <a class="btn cta--btn" href="#">Request Invite</a>
+        </div>
+        <div class="img-wrapper">
+          <img src="./images/image-mockups.png" alt="Mockeups">
+        </div>
       </div>
     </section>
 
     <section class="services">
-      <div class="services__content">
+      <div class="services__content container">
         <div class="section-intro">
           <h2>Why choose Easybank?</h2>
-          <p>We leverage Open Banking to turn your bank account into your financial hub.<br />Control your finances like
+          <p>We leverage Open Banking to turn your bank account into your financial hub.<br />Control your finances
+            like
             never before.</p>
         </div>
         <div class="media-wrapper">
@@ -78,20 +90,23 @@
           <div class="media">
             <img src="./images/icon-onboarding.svg" alt="Fast onboarding">
             <h4>Fast Onboarding</h4>
-            <p>We don’t do branches. Open your account in minutes online and start taking control of your finances right
+            <p>We don’t do branches. Open your account in minutes online and start taking control of your finances
+              right
               away.</p>
           </div>
           <div class="media">
             <img src="./images/icon-api.svg" alt="Open API">
             <h4>Open API</h4>
-            <p>Manage your savings, investments, pension, and much more from one account. Tracking your money has never
+            <p>Manage your savings, investments, pension, and much more from one account. Tracking your money has
+              never
               been easier.</p>
           </div>
         </div>
       </div>
     </section>
+
     <section class="articles">
-      <div class="articles__content">
+      <div class="articles__content container">
         <div class="section-intro">
           <h2>Latest Articles</h2>
         </div>
@@ -100,7 +115,8 @@
             <img src="./images/image-currency.jpg" alt="Currency">
             <span class="author">By Claire Robinson</span>
             <h4 class="title">Receive money in any currency with no fees</h4>
-            <p>The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive
+            <p>The world is getting smaller and we’re becoming more mobile. So why should you be forced to only
+              receive
               money in a single …</p>
           </div>
           <div class="card">
@@ -115,46 +131,54 @@
             <img src="./images/image-plane.jpg" alt="Plane">
             <span class="author">By Wilson Hutton</span>
             <h4 class="title">Take your Easybank card wherever you go</h4>
-            <p>We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad.
+            <p>We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re
+              abroad.
               We’ll even show you …</p>
           </div>
           <div class="card">
             <img src="./images/image-confetti.jpg" alt="Confetti">
             <span class="author">By Claire Robinson</span>
             <h4 class="title">Our invite-only Beta accounts are now live!</h4>
-            <p>After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request
+            <p>After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to
+              request
               an invite through the site ...</p>
           </div>
         </div>
       </div>
     </section>
+
   </main>
-  <footer>
-    <div class="column column-first">
-      <a class="brand" href="#"><img src="./images/logo-white.svg" alt="Logo"></a>
-      <ul class="social-links">
-        <li><a href="https://twitter.com/matrixersp"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+
+  <footer class="footer">
+    <div class="footer__content container">
+
+      <div class="column column-first">
+        <a class="brand" href="#"><img src="./images/logo-white.svg" alt="Logo"></a>
+        <ul class="social-links">
+          <li><a href="https://twitter.com/matrixersp"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+
+      <ul class="sub-links column">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
       </ul>
-    </div>
+      <ul class="sub-links column">
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
 
-    <ul class="sub-links column">
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-    <ul class="sub-links column">
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Support</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-    </ul>
+      <div class="column column-last">
+        <a class="btn cta--btn" href="#">Request Invite</a>
+        <span>© Easybank. All Rights Reserved</span>
+      </div>
 
-    <div class="column column-last">
-      <a class="btn cta--btn" href="#">Request Invite</a>
-      <span>© Easybank. All Rights Reserved</span>
     </div>
   </footer>
 
@@ -162,6 +186,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/matrixersp" target="_blank">Mohammed Boudad</a>.
   </div>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

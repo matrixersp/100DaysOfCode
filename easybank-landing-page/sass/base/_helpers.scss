@@ -1,0 +1,10 @@
+.container {
+  max-width: 1140px;
+  // border: 1px solid red;
+  margin: 0 4em;
+  width: 100%;
+
+  @include mobile {
+    margin: 0 2em;
+  }
+}
