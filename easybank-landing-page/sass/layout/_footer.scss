@@ -1,8 +1,12 @@
 footer {
   background-color: $dark-blue;
-  color: white;
-  padding: 3em 10%;
-  margin-left: -0.75em;
+  color: $white;
+  padding: 3em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__content {
   display: flex;
   justify-content: space-between;
 

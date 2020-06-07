@@ -60,48 +60,14 @@
   font-size: 2.75em;
   font-weight: 300;
   margin-bottom: 0.5em;
+
+  @include mobile {
+    font-size: 2.25em;
+    margin-bottom: 0.75em;
+  }
 }
 
 .hero__content p {
   color: $grayish-blue;
   margin-bottom: 2.5em;
-}
-
-.services {
-  background-color: $light-grayish-blue;
-  padding: 3em 10%;
-  margin-left: -0.75em;
-}
-
-.section-intro {
-  margin-bottom: 2em;
-  margin-left: 0.75em;
-}
-
-.section-intro h2 {
-  color: $dark-blue;
-}
-
-.section-intro p {
-  color: $grayish-blue;
-}
-
-.section-intro h2 {
-  font-size: 2em;
-  font-weight: 300;
-}
-
-.media-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.articles {
-  padding: 3em 10%;
-  margin-left: -0.75em;
-}
-
-.cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
 }

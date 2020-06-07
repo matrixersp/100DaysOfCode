@@ -13,6 +13,18 @@ section {
   justify-content: center;
 }
 
+section:not(:first-of-type) {
+  padding: 3.5em 0;
+}
+
+section:nth-of-type(odd) {
+  background-color: $very-light-gray;
+}
+
+section:nth-of-type(even) {
+  background-color: $light-grayish-blue;
+}
+
 a {
   text-decoration: none;
 }
@@ -22,4 +34,25 @@ ul {
   padding-left: 0;
   list-style: none;
   display: flex;
+}
+
+.section-intro {
+  margin-bottom: 2em;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.section-intro h2 {
+  color: $dark-blue;
+}
+
+.section-intro p {
+  color: $grayish-blue;
+}
+
+.section-intro h2 {
+  font-size: 2em;
+  font-weight: 300;
 }
