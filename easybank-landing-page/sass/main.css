@@ -369,6 +369,10 @@ a {
   text-decoration: none;
 }
 
+section a:hover:not(.btn), footer a:hover:not(.btn) {
+  color: #31d3ad;
+}
+
 ul {
   margin: 0;
   padding-left: 0;
@@ -683,6 +687,10 @@ footer {
   background: linear-gradient(to right, #31d35c, #2bb7da);
   border: none;
   border-radius: 10em;
+  font-weight: 700;
+}
+.cta--btn:hover {
+  opacity: 0.7;
 }
 
 .media-wrapper {
@@ -728,6 +736,20 @@ footer {
 
 .card__body {
   padding: 1em;
+}
+
+.card__body > span {
+  font-size: 0.875em;
+}
+
+.card__body > h4 {
+  font-weight: 400;
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+
+.card__body > h4 > a {
+  color: #9698a6;
 }
 
 .card__img {

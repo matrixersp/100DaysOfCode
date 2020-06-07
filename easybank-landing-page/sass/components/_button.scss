@@ -9,4 +9,9 @@
   background: linear-gradient(to right, $lime-green, $bright-cyan);
   border: none;
   border-radius: 10em;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

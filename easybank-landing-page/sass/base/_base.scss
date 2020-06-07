@@ -29,6 +29,10 @@ a {
   text-decoration: none;
 }
 
+section a:hover:not(.btn), footer a:hover:not(.btn) {
+  color: hsl(166, 65%, 51%);
+}
+
 ul {
   margin: 0;
   padding-left: 0;
