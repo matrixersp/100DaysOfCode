@@ -1,0 +1,62 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+
+  @include tablet {
+    padding: 4em 2em;
+  }
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav, .header .btn--cta {
+  display: none;
+
+  @include tablet {
+    display: initial;
+  }
+}
+
+.nav-links {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links > li + li {
+  margin-left: 2em;
+}
+
+.nav-links > li > a {
+  color: $very-dark-blue;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.875em;
+}
+
+.menu-toggle {
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 0.5em;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.main-nav.is-open {
+  display: initial;
+}
+
+.menu-toggle.is-open > img {
+  content: url('../../images/icon-close.svg');
+}

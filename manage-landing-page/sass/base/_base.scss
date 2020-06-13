@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $white;
+  background-image: url('../../images/bg-tablet-pattern.svg'),
+                    url('../../images/bg-tablet-pattern.svg');
+  background-size: auto, auto;
+  background-repeat: no-repeat;
+  background-position: 52vw -10vw, -22vw 60vw;
+}

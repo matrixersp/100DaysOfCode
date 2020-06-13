@@ -1,0 +1,13 @@
+.container {
+  max-width: 1140px;
+  margin: 0 2em;
+  width: 100%;
+
+  @include tablet {
+    margin: 0 2em;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
