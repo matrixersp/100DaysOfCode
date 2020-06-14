@@ -1,0 +1,84 @@
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+
+  @include desktop {
+    padding: 4em 2em;
+  }
+}
+
+.services__inner {
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.services__intro > h2 {
+  font-size: 2.25em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.services__intro,
+.services__list {
+  flex: 0 1 45%;
+}
+
+.services__item {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+  grid-gap: 0.5em 1.5em;
+}
+
+.services__item + .services__item {
+  margin-top: 3em;
+}
+
+.services__item > .item__bg {
+  background-color: $very-pale-red;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  margin-left: 2em;
+  margin-right: -2em;
+
+  @include desktop {
+    background-color: transparent;
+  }
+}
+
+.services__item > .number {
+  padding: 0.25em 1.5em;
+  border-radius: 2em;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $white;
+  background-color: $bright-red;
+  box-shadow: 0 0.375em 0.5em $bright-red-shadow;
+  grid-column: 1 / 2;
+  grid-row: 1;
+  width: fit-content;
+}
+
+.services__item > h4 {
+  align-self: center;
+  text-align: left;
+  margin: 0;
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.services__item > p {
+  margin: 0;
+  grid-column: 1 / 3;
+  grid-row: 2;
+
+  @include desktop {
+    grid-column: 2 / 3;
+  }
+}

@@ -1,5 +1,10 @@
 html {
   box-sizing: border-box;
+  font-size: calc(0.8em + 0.5vw);
+
+  @include desktop {
+    font-size: 1em;
+  }
 }
 
 *,
@@ -15,4 +20,5 @@ body {
   background-size: auto, auto;
   background-repeat: no-repeat;
   background-position: 52vw -10vw, -22vw 60vw;
+  line-height: 1.6;
 }

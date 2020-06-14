@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+
+  @include desktop {
+    padding: 4em 2em;
+  }
+}
+
+.hero__inner {
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.hero__intro-illustration {
+  order: 3;
+  margin-right: -1em;
+}
+
+.hero__intro-illustration,
+.hero__intro-illustration > img {
+  width: 100%;
+}
+
+.hero__intro-illustration,
+.hero__intro {
+  flex: 0 1 45%;
+}
+
+.hero__intro > h1 {
+  font-size: calc(2rem + 1.6vw);
+  line-height: 1.2;
+
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}
+
+.hero__intro > p {
+  max-width: 22em;
+  margin: 0 auto 2em;
+
+  @include desktop {
+    margin: 0 0 2.375em;
+  }
+}

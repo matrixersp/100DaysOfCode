@@ -13,7 +13,10 @@
         'base/helpers';
 
 // 4. Layout-related section
-@import 'layout/header';
+@import 'layout/header',
+        'layout/hero',
+        'layout/services',
+        'layout/testimonials';
 
 // 5. Components
 @import 'components/button';

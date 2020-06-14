@@ -3,11 +3,15 @@
   margin: 0 2em;
   width: 100%;
 
-  @include tablet {
+  @include desktop {
     margin: 0 2em;
   }
 }
 
 .hidden {
   display: none !important;
+}
+
+.noscroll {
+  overflow: hidden;
 }

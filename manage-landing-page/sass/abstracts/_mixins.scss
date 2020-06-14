@@ -1,8 +1,8 @@
-// @mixin desktop {
-//   @media (min-width: 30em) {
-//     @content;
-//   }
-// }
+@mixin desktop {
+  @media (min-width: 62.5em) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: 56em) {

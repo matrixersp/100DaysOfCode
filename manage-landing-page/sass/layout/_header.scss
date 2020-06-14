@@ -3,7 +3,7 @@
   justify-content: center;
   padding: 2em 1em;
 
-  @include tablet {
+  @include desktop {
     padding: 4em 2em;
   }
 }
@@ -14,41 +14,81 @@
   align-items: center;
 }
 
-.main-nav, .header .btn--cta {
+.main-nav,
+.header .btn--cta {
   display: none;
 
-  @include tablet {
+  @include desktop {
     display: initial;
   }
 }
 
+.main-nav {
+  background-color: $white;
+  position: fixed;
+  z-index: 20;
+  padding: 2.25em 7em 2em;
+  border-radius: 0.25em;
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.3);
+  top: 6em;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    background-color: transparent;
+    position: initial;
+    padding: 0;
+    border-radius: none;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
 .nav-links {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0.5em;
   list-style-type: none;
+  padding-left: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include desktop {
+    flex-direction: row;
+    margin-bottom: 0.5em;
+  }
 }
 
 .nav-links > li + li {
-  margin-left: 2em;
+  margin-top: 1.5em;
+
+  @include desktop {
+    margin-left: 2em;
+    margin-top: 0em;
+  }
 }
 
 .nav-links > li > a {
   color: $very-dark-blue;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 0.875em;
+  letter-spacing: -0.01em;
+
+  @include desktop {
+    font-weight: 400;
+  }
 }
 
 .menu-toggle {
   border: none;
-  background-color: $white;
+  background-color: transparent;
   cursor: pointer;
   outline: none;
   margin-bottom: 0.5em;
+  position: relative;
+  padding: 0.5em;
 
-  @include tablet {
+  @include desktop {
     display: none;
   }
 }
@@ -57,6 +97,59 @@
   display: initial;
 }
 
-.menu-toggle.is-open > img {
-  content: url('../../images/icon-close.svg');
+.menu-toggle__inner,
+.menu-toggle__inner::before,
+.menu-toggle__inner::after {
+  display: block;
+  width: 1.675em;
+  height: 0.25em;
+  background-color: rgb(41, 54, 78);
+  margin-bottom: 0.125em;
+  transition: all 0.2s linear;
+  border-radius: 1em;
+}
+
+.menu-toggle__inner::before,
+.menu-toggle__inner::after {
+  content: " ";
+  position: absolute;
+}
+
+.menu-toggle__inner::before {
+  margin-top: -0.41em;
+}
+
+.menu-toggle__inner::after {
+  margin-top: 0.41em;
+}
+
+.backdrop {
+  display: none;
+}
+
+.main-nav.is-open ~ .backdrop {
+  display: block;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  @include desktop {
+    position: initial;
+    display: none;
+  }
+}
+
+.main-nav.is-open ~ .menu-toggle > div {
+  background-color: transparent;
+}
+
+.main-nav.is-open ~ .menu-toggle > div:before {
+  transform: rotate(45deg) translate(0.27em, 0.4em);
+}
+
+.main-nav.is-open ~ .menu-toggle > div:after {
+  transform: rotate(-45deg) translate(0.23em, -0.25em);
 }
