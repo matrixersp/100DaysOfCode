@@ -16,7 +16,10 @@
 @import 'layout/header',
         'layout/hero',
         'layout/services',
-        'layout/testimonials';
+        'layout/testimonials',
+        'layout/get-started',
+        'layout/footer';
 
 // 5. Components
-@import 'components/button';
+@import 'components/button',
+        'components/card';

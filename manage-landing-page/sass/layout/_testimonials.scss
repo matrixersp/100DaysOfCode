@@ -1,4 +1,37 @@
+.testimonials {
+  text-align: center;
+  margin-bottom: 8em;
+}
+
+.testimonials .btn--cta {
+  margin-top: 3.5em;
+}
+
 .testimonials__intro > h2 {
   text-align: center;
   font-size: 2.25em;
+}
+
+.testimonials__list {
+  display: flex;
+  overflow: hidden;
+  padding-top: 7em;
+  cursor: pointer;
+}
+
+.testimonials__item {
+  padding: 2.25em;
+  background-color: $very-light-gray;
+  min-width: 33em;
+  text-align: center;
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.06);
+}
+
+.testimonials__item + .testimonials__item {
+  margin-left: 2.5em;
+}
+
+.testimonials__item > img {
+  margin-top: -7em;
+  width: 6em;
 }

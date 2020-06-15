@@ -1,0 +1,21 @@
+.get-started {
+  background-color: $bright-red;
+  display: flex;
+  justify-content: center;
+  padding: 2.5em 0;
+}
+
+.get-started__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.get-started__intro > h2 {
+  font-size: 2.25em;
+  color: $white;
+}
+
+.get-started__intro{
+  flex: 0 1 40%;
+}
