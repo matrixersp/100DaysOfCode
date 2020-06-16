@@ -28,10 +28,24 @@ function scrollRight() {
   this.scrollLeft += +5;
 }
 
-list.addEventListener("mouseout", function (event) {
-  var e = event.toElement || event.relatedTarget;
-  if (e.parentNode == this || e == this || e.parentNode.parentNode == this)
-    return;
-
+list.addEventListener("mouseleave", function (event) {
   clearInterval(interval);
 });
+
+// list.addEventListener("mouseout", function (event) {
+//   var e = event.toElement || event.relatedTarget;
+//   if (e.parentNode == this || e == this || e.parentNode.parentNode == this)
+//     return;
+
+//   clearInterval(interval);
+// });
+
+// setInterval(function() {
+
+//   var controls = document.getElementById('controls');
+
+//   console.log(getComputedStyle(list).left);
+//   // list.style.left = list.style.left ? parseInt(list.style.left) - 100 + 'px' : 0;
+// }, 1000)
+
+

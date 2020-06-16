@@ -22,3 +22,14 @@ body {
   background-position: 52vw -10vw, -22vw 60vw;
   line-height: 1.6;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  color: $dark-blue;
+}
+
+p {
+  color: $dark-grayish-blue;
+}

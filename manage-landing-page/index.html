@@ -13,7 +13,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
-      font-size: 11px;
+      font-size: 14px;
       text-align: center;
     }
 
@@ -140,6 +140,16 @@
         </div>
 
       </div>
+      <div id="controls" class="testimonials__controls">
+        <input type="radio" name="dot" id="dot1" checked="checked">
+        <label for="dot1"></label>
+        <input type="radio" name="dot" id="dot2">
+        <label for="dot2"></label>
+        <input type="radio" name="dot" id="dot3">
+        <label for="dot3"></label>
+        <input type="radio" name="dot" id="dot4">
+        <label for="dot4"></label>
+      </div>
       <a class="btn btn--cta" href="/get-started">Get Started</a>
     </section>
     <section class="get-started">
@@ -155,10 +165,10 @@
   <footer class="footer">
     <div class="container">
       <div class="grid">
-        <div class="grid__item">
+        <div class="grid__item l-logo">
           <a href="/"><img src="./images/logo-white.svg" alt="Logo"></a>
         </div>
-        <div class="grid__item">
+        <div class="grid__item l-social">
           <ul class="social-links">
             <li><i class="fab fa-facebook-square"></i></li>
             <li><i class="fab fa-youtube"></i></li>
@@ -167,7 +177,7 @@
             <li><i class="fab fa-instagram"></i></li>
           </ul>
         </div>
-        <div class="grid__item">
+        <div class="grid__item l-links-1">
           <ul class="sub-links">
             <li><a href="/home">Home</a></li>
             <li><a href="/pricing">Pricing</a></li>
@@ -175,21 +185,21 @@
             <li><a href="/about">About Us</a></li>
           </ul>
         </div>
-        <div class="grid__item">
+        <div class="grid__item l-links-2">
           <ul class="sub-links">
             <li><a href="/careers">Creers</a></li>
             <li><a href="/comunity">Comunity</a></li>
             <li><a href="/privacy-policy">Privacy Policy</a></li>
           </ul>
         </div>
-        <div class="grid__item">
+        <div class="grid__item l-news-letter">
           <form class="news-letter">
-            <input type="email" name="email" placeholder="Updates in your inbox…">
-            <button class="btn">Go</button>
+            <input type="email" name="email" placeholder="Updates in your inbox…" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" title="Please insert a valid email" required>
+            <button class="btn btn--cta">Go</button>
           </form>
         </div>
 
-        <div class="grid__item">
+        <div class="grid__item l-copyright">
           <div class="copyright">Copyright 2020. All Rights Reserved</div>
         </div>
       </div>

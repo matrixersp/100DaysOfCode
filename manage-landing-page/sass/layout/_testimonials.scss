@@ -1,6 +1,11 @@
 .testimonials {
   text-align: center;
   margin-bottom: 8em;
+
+  overflow: hidden;
+  @include desktop {
+    overflow: initial;
+  }
 }
 
 .testimonials .btn--cta {
@@ -14,24 +19,130 @@
 
 .testimonials__list {
   display: flex;
-  overflow: hidden;
+  width: 400%;
   padding-top: 7em;
-  cursor: pointer;
+  position: relative;
+  left: 0;
+  animation: 25s slide linear infinite;
+
+  @include desktop {
+    width: initial;
+    overflow: hidden;
+    cursor: pointer;
+    animation: none;
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
 }
 
 .testimonials__item {
-  padding: 2.25em;
   background-color: $very-light-gray;
-  min-width: 33em;
-  text-align: center;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.06);
+  padding: 2.25em;
+  width: 25%;
+  margin: 0 2em;
+
+  @include desktop {
+    width: initial;
+    min-width: 33em;
+    text-align: center;
+  }
 }
 
 .testimonials__item + .testimonials__item {
-  margin-left: 2.5em;
+  @include desktop {
+    margin-left: 2.5em;
+  }
 }
 
 .testimonials__item > img {
   margin-top: -7em;
   width: 6em;
+}
+
+.testimonials__controls {
+  margin-top: 2em;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.testimonials__controls > input[type="radio"] {
+  display: none;
+}
+
+.testimonials__controls > label {
+  width: 0.75em;
+  height: 0.75em;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $bright-red;
+}
+
+.testimonials__controls > label:nth-of-type(1) {
+  background-color: $bright-red;
+  animation: 25s check linear infinite;
+}
+
+.testimonials__controls > label:nth-of-type(2) {
+  animation: 25s check linear 6s infinite;
+}
+
+.testimonials__controls > label:nth-of-type(3) {
+  animation: 25s check linear 12s infinite;
+}
+
+.testimonials__controls > label:nth-of-type(4) {
+  animation: 25s check linear 18s infinite;
+}
+
+@keyframes check {
+  0% {
+    background-color: $bright-red;
+  }
+
+  24% {
+    background-color: $bright-red;
+  }
+
+  25% {
+    background-color: $white;
+  }
+  
+  95% {
+    background-color: $white;
+  }
 }

@@ -6,9 +6,14 @@
 }
 
 .get-started__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
 }
 
 .get-started__intro > h2 {
@@ -16,6 +21,6 @@
   color: $white;
 }
 
-.get-started__intro{
+.get-started__intro {
   flex: 0 1 40%;
 }

@@ -68,15 +68,19 @@
 }
 
 .nav-links > li > a {
-  color: $very-dark-blue;
+  color: $dark-blue;
   text-decoration: none;
   font-weight: 700;
   font-size: 0.875em;
   letter-spacing: -0.01em;
 
   @include desktop {
-    font-weight: 400;
+    font-weight: 500;
   }
+}
+
+.nav-links > li > a:hover {
+  color: $dark-grayish-blue;
 }
 
 .menu-toggle {
