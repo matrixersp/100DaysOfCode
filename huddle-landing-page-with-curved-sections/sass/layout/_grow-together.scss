@@ -1,0 +1,13 @@
+.grow-together__inner {
+  display: flex;
+  align-items: center;
+}
+
+.grow-together__body,
+.grow-together__illustration {
+  flex: 1;
+}
+
+.grow-together__illustration > img {
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__body {
+  text-align: center;
+  margin: 5em 0;
+}
+
+.hero__body > h1 {
+  margin-bottom: 0.5em;
+}
+
+.hero__body > p {
+  max-width: 30em;
+  margin: 1.25em auto 2em;
+}
+
+.hero__illustration {
+  width: 84%;
+}
+
+.hero__illustration > img {
+  width: 100%;
+}
+
+.hero__numbers {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5em 0;
+}
+
+.hero__numbers .count {
+  font-size: 5em;
+  font-weight: 700;
+}
+
+.hero__numbers p {
+  margin: 0;
+  font-size: 1.375em;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $dark-cyan; 
+}
