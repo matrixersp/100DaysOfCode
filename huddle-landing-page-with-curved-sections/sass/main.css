@@ -339,6 +339,7 @@ template {
 
 html {
   box-sizing: border-box;
+  font-size: calc(0.6em + 0.5vw);
 }
 
 *,
@@ -347,6 +348,11 @@ html {
   box-sizing: inherit;
 }
 
+@media (min-width: 1140px) {
+  html {
+    font-size: 1em;
+  }
+}
 header,
 section {
   color: #00252e;
@@ -355,20 +361,27 @@ section {
 header,
 section,
 footer {
-  padding: 0 4em;
   display: flex;
   justify-content: center;
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
   font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-size: 2.75em;
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.35rem;
+}
+
+@media screen and (max-width: 54em) {
+  .logo {
+    max-width: 10em;
+  }
 }
 
 .container {
@@ -376,7 +389,7 @@ h1 {
   width: 100%;
   margin: 0 3em;
 }
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 54em) {
   .container {
     margin: 0 2em;
   }
@@ -432,10 +445,22 @@ body {
   width: 100%;
   margin: 5em 0;
 }
+@media screen and (max-width: 54em) {
+  .hero__numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .hero__numbers .count {
   font-size: 5em;
   font-weight: 700;
+}
+
+@media screen and (max-width: 54em) {
+  .hero__numbers > .media + .media {
+    margin-top: 6em;
+  }
 }
 
 .hero__numbers p {
@@ -446,18 +471,191 @@ body {
   color: #6e7a7c;
 }
 
-.grow-together__inner {
+section:nth-child(2) {
+  background-image: url("/images/bg-section-bottom-desktop-1.svg"), url("/images/bg-section-top-desktop-1.svg");
+}
+
+section:nth-child(4) {
+  background-image: url("/images/bg-section-bottom-desktop-1.svg"), url("/images/bg-section-top-desktop-2.svg");
+}
+
+section:nth-child(2),
+section:nth-child(4) {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom, top;
+  background-size: contain;
+}
+
+section:nth-child(2),
+section:nth-child(3),
+section:nth-child(4) {
+  padding: 9.5vw 0;
+}
+
+.l-outer {
+  padding: 3em 0;
+}
+
+section:nth-child(2) .l-outer,
+section:nth-child(4) .l-outer {
+  background-color: #f5faff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.l-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 54em) {
+  .l-inner {
+    flex-direction: column;
+  }
 }
 
-.grow-together__body,
-.grow-together__illustration {
-  flex: 1;
+.l-content,
+.l-illustration {
+  flex: 0 1 45%;
 }
 
-.grow-together__illustration > img {
+@media screen and (max-width: 54em) {
+  .l-content {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 54em) {
+  .l-illustration {
+    width: 80%;
+    order: -1;
+  }
+}
+
+.l-illustration > img {
   width: 100%;
+}
+
+.get-started__inner {
+  text-align: center;
+  padding: 10em 0;
+}
+
+.footer {
+  background-image: url("/images/bg-footer-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top, center;
+  padding: 10.5vw 0 0;
+}
+@media screen and (max-width: 54em) {
+  .footer {
+    background-image: url("/images/bg-footer-top-mobile.svg");
+  }
+}
+
+.footer .l-outer {
+  background-color: #00252e;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+  width: 100%;
+}
+@media screen and (max-width: 54em) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer .phone,
+footer .email {
+  margin: 1em 0;
+}
+
+footer .phone img,
+footer .email img {
+  margin-right: 1em;
+}
+
+footer .social-links {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 4.5rem;
+}
+
+footer .social-links li + li {
+  margin-left: 1.375em;
+}
+
+.contact-info,
+.newsletter {
+  flex: 0 1 45%;
+}
+
+@media screen and (max-width: 54em) {
+  .contact-info {
+    order: 1;
+    margin-top: 5em;
+  }
+}
+
+footer p {
+  font-size: 0.9em;
+  max-width: 21.25rem;
+  margin-bottom: 2em;
+}
+
+.newsletter h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+}
+@media screen and (max-width: 54em) {
+  form {
+    flex-direction: column;
+  }
+}
+
+footer input,
+footer button {
+  border-radius: 0.25em;
+  outline: none;
+  border: none;
+}
+
+footer input {
+  padding: 0.875em 0.75em;
+  margin-right: 2em;
+  flex: 1 1 60%;
+}
+@media screen and (max-width: 54em) {
+  footer input {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+
+footer .btn {
+  padding: 0.875em 2em;
+  background-color: #ff52bf;
+  color: white;
+  align-self: flex-end;
 }
 
 .btn {

@@ -1,0 +1,67 @@
+section:nth-child(2) {
+  background-image: url('/images/bg-section-bottom-desktop-1.svg'),
+      url('/images/bg-section-top-desktop-1.svg');
+}
+
+section:nth-child(4) {
+  background-image: url('/images/bg-section-bottom-desktop-1.svg'),
+      url('/images/bg-section-top-desktop-2.svg');
+}
+
+section:nth-child(2),
+section:nth-child(4) {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom, top;
+  background-size: contain;
+}
+
+section:nth-child(2),
+section:nth-child(3),
+section:nth-child(4) {
+  padding: 9.5vw 0;
+}
+
+.l-outer {
+  padding: 3em 0;
+}
+
+section:nth-child(2) .l-outer,
+section:nth-child(4) .l-outer {
+  background-color: $section-bg;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.l-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.l-content,
+.l-illustration {
+  flex: 0 1 45%;
+}
+
+.l-content {
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.l-illustration {
+  @include mobile {
+    width: 80%;
+    order: -1;
+  }
+}
+
+.l-illustration > img {
+  width: 100%;
+}

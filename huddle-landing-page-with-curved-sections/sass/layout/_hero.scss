@@ -31,11 +31,22 @@
   justify-content: space-around;
   width: 100%;
   margin: 5em 0;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .hero__numbers .count {
   font-size: 5em;
   font-weight: 700;
+}
+
+.hero__numbers > .media + .media {
+  @include mobile {
+    margin-top: 6em;
+  }
 }
 
 .hero__numbers p {
